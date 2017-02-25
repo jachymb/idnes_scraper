@@ -58,7 +58,7 @@ class IDnesSpider(scrapy.Spider):
             try:
                 user_id = int("".join(comment.xpath(".//h4[@class='name']/sup/text()").extract()))
             except ValueError:
-                break # No user id = article too old
+                return # No user id = article too old
 
             text = p_extract(comment, ".//div[@class='user-text']")
             upvotes, downvotes = (int(x.strip().replace("\u2212","-"))
