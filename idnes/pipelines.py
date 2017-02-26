@@ -19,12 +19,12 @@ def create_comment(comment_item, article):
     timestamp = datetime.strptime(comment_item["timestamp"] ,"%d.%m.%Y %H:%M")
     
     return Comment(
-        user = user,
-        text = comment_item["text"],
-        upvotes = comment_item["upvotes"],
-        downvotest = comment_item["downvotes"],
-        timestamp = timestamp,
-        article = article)
+        user=user,
+        text=comment_item["text"],
+        upvotes=comment_item["upvotes"],
+        downvotes=comment_item["downvotes"],
+        timestamp=timestamp,
+        article=article)
 
 @db_session
 def get_tag(name):

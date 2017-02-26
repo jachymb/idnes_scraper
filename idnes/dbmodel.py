@@ -32,7 +32,7 @@ class Comment(db.Entity):
     text = Required(str)
     timestamp = Required(datetime)
     upvotes = Required(int)
-    downvotest = Required(int)
+    downvotes = Required(int)
 
 
 class User(db.Entity):
