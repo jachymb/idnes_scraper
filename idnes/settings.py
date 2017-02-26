@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Scrapy settings for idnes project
 #
 # For simplicity, this file contains only settings considered important or
@@ -64,9 +62,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'idnes.pipelines.IdnesPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'idnes.pipelines.IdnesPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +86,8 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+DATABASE = {
+        "drivername": "sqlite",
+        "database": "idnes.db"
+}

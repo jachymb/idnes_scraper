@@ -1,4 +1,5 @@
 #!/bin/sh
 OUTFILE=idnes.json
 [ -f $OUTFILE ] && rm $OUTFILE
-scrapy crawl idnes -o $OUTFILE -L WARNING
+rm idnes/database.sqlite
+scrapy crawl idnes -o $OUTFILE -L INFO
